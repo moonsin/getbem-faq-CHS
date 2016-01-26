@@ -1,4 +1,4 @@
-# getbem-faq-CHN-
+# getbem-faq-CHS-
 FAQ of getbem.com in Chinese
 #FAQ#
 这些频繁被问到的问题是刚刚开始使用BEM的开发者们真实遇到的问题，由GetBEM社区来回答。请不要客气地的随便提问，然后我们也会解答。
