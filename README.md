@@ -177,27 +177,27 @@ BEM CSS 明确的定义了哪个CSS属于界面的哪一块。所以他回答诸
 
 根据BEM理论，块的结构是应该被扁平。你不需要反映出块的DOM结构的嵌套关系，所有，在这种情况下这些类命名应该是:
 
-`.block {}
-.block__elem1 {}
-.block__elem2 {}
-.block__elem3 {}`
+	.block {}
+	.block__elem1 {}
+	.block__elem2 {}
+	.block__elem3 {}
 
 然而DOM表现在块里是嵌套的:
 
-`<div class='block'>
-    <div class='block__elem1'>
-        <div class='block__elem2'>
-            <div class='block__elem3'></div>
-        </div>
-    </div>
-</div>`
+	<div class='block'>
+	    <div class='block__elem1'>
+	        <div class='block__elem2'>
+	            <div class='block__elem3'></div>
+	        </div>
+	    </div>
+	</div>
 
 除此之外的事实是，这些类看着更加好看了，这让这些元素仅仅依靠块。所以，假如你需要更改页面，你可以轻易的穿越块来移动这些元素。这些块DOM结构的改变不需要对应的CSS代码的改变。
 
 	<div class='block'>
-	<div class='block__elem1'>
-	<div class='block__elem2'></div>
-	</div>
-	<div class='block__elem3'></div>
+		<div class='block__elem1'>
+			<div class='block__elem2'></div>
+		</div>
+		<div class='block__elem3'></div>
 	</div>
 
