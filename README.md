@@ -198,5 +198,5 @@ BEM CSS 明确的定义了哪个CSS属于界面的哪一块。所以他回答诸
 	<div class='block__elem2'></div>
 	</div>
 	<div class='block__elem3'></div>
-	</div>`
+	</div>
 
