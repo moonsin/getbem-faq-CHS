@@ -41,7 +41,6 @@ BEM CSS 明确的定义了哪个CSS属于界面的哪一块。所以他回答诸
 `<div class="menu__item button active"></div>`
 
 所有这三者都在同样的一个DOM节点里，所有不可能去区分我们的意思是`menu__item.active`还是`button.active`。
-
 然而在有前缀的情况下，命名`button--active` 明确的说明了这个只是影响了 button这个块。
 
 另外一个重点是
