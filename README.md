@@ -44,9 +44,9 @@ BEM CSS 明确的定义了哪个CSS属于界面的哪一块。所以他回答诸
 
 另外一个重点是CSS的specificity（特异性）。联合的选择器比单一类选择器更加特殊（意思是更加重要）。这意味着你可能会遇到麻烦当用parent块的代码来重新定义他们的时候。
 
-`<div class="header">
-	<button class="button active">
-</div>`
+	<div class="header">
+		<button class="button active">
+	</div>
 
 如果你已经有了`.button.active` 选择器在代码里了，那么重新定义`.header.button`的specificity（特异性）和联合修饰符的选择器的specificity（特异性）是完全相同的，这取决于CSS规则声明的顺序。然而为了防备使用了有前缀的修饰符，你可以一直确使自己使用的层叠选择器`.header .button`会覆盖`.button--active`修饰符。
 
@@ -96,9 +96,9 @@ BEM CSS 明确的定义了哪个CSS属于界面的哪一块。所以他回答诸
 
 所以，这完全是一个BEM的代码模式。
 
-`.my-block--xmas .my-block__button {
-    /* Jingle bells, jingle bells, jingle all the way.*/
-}`
+	.my-block--xmas .my-block__button {
+	    /* Jingle bells, jingle bells, jingle all the way.*/
+	}
 
 ###我能不能创建一个全局的修饰符(modifier)来适用于任意一个块(block)？###
 
@@ -118,20 +118,20 @@ BEM CSS 明确的定义了哪个CSS属于界面的哪一块。所以他回答诸
 
 第一，specificity（特异性）的问题会出现。在局部的情况CSS的代码像这样。
 
-`.block {
-  display: block;
-}
-.block--hidden {
-  display: none;
-}`
+	.block {
+	  display: block;
+	}
+	.block--hidden {
+	  display: none;
+	}
 
 块和修饰符选择器有相同的specificity（特异性）。因为修饰符声明在块的后面，所有重新定义了CSS的属性。这些样式属于块并且存储在了块文件中。因此，在源文件编译的结果里，你一直会得到他们按照这个顺序，并且可以确定重定义的发生。
 
 在全局修饰符的情况下，它的属性们可以被块们重定义，如果块的代码在修饰符之后：
 
-`.hidden { display: none }
-/* ... */
-.block { display: block }`
+	.hidden { display: none }
+	/* ... */
+	.block { display: block }
 
 `<div class="block hidden">you still see me</div>`
 
@@ -193,7 +193,7 @@ BEM CSS 明确的定义了哪个CSS属于界面的哪一块。所以他回答诸
 	</div>
 
 除此之外的事实是，这些类看着更加好看了，这让这些元素仅仅依靠块。所以，假如你需要更改页面，你可以轻易的穿越块来移动这些元素。这些块DOM结构的改变不需要对应的CSS代码的改变。
-
+	
 	<div class='block'>
 		<div class='block__elem1'>
 			<div class='block__elem2'></div>
